@@ -1,0 +1,50 @@
+struct 
+struct เป็นการรวบรวมตัวแปรที่มีความคล้ายคลึงกัน ภายใต้ชื่อเพียงชื่อเดียว
+ตัวแปรแต่ละตัวไม่จำเป็นต้องเป็นชนิดเดียวกัน
+การประกาศตัวแปร struct 
+struct ชื่อโครงสร้าง
+{
+    field
+};
+การเรียกใช้  
+struct ชื่อโครงสร้าง ชื่อตัวแปรที่มีโครงสร้างแบบนั้น
+การประกาศตัวแปรแบบต่างๆ
+struct employee {
+
+char firstName[20];
+char lastName[20];
+unsigned int age;
+char gender;
+double hourlySalary;
+};
+ struct employee employee1, employee2; (ชื่อตัวแปร)
+struct employee employees[100];
+struct employee {
+
+char firstName[20];
+char lastName[20];
+unsigned int age;
+char gender;
+double hourlySalary;
+} employee1, employee2, *employeePtr;
+
+Alert !!!!!!!!!!!!!!!!!
+ไม่สามารถกำหนดค่าในการนิยามstruct ได้
+Ex.
+struct test{
+    int i =7;
+};
+-  การเข้าถึงแต่ละฟิลด์
+ ชื่อตัวแปร.ชื่อประเภทฟิลด์
+
+การส่งผ่านstruct ไปยัง function  
+ - สามารถส่งได้ทั้ง struct หรือ ส่งfield อันใดอันหนึ่งเข้าไปก็ได้
+ Pointer กับ struct
+ การประกาสตัวแปร pointer ต้องเลือกให้เป็นชนิดเดียวกันกับข้อมูลที่ชี้ไปหา 
+ กับ struct ก็เหมือนกัน
+ การประกาศตัวแปรpointer อ้างไปถึง struct
+ struct ชื่อรูปแบบ *ชื่อตัวแปรpointer
+  การเข้าถึงfield แต่ละ field 
+  *ชื่อตัวแปรpointer.ชื่อfield
+  สามารถย่อได้
+  เป็น ชื่อตัวแปรpointer -> field
